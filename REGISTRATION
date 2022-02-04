@@ -1,0 +1,63 @@
+package myInfo;
+import java.util.Scanner;
+public class Registration {
+
+	public static void main(String[] args) {
+		String name,ID_num,address,gender,travel_season,travel_package,category;
+		int age;
+		double travel_ins,travel_rate,total;
+		
+		Scanner sc = new Scanner(System.in);		
+		
+		System.out.print("Name                       ");
+		name=sc.next();
+		
+		System.out.print("Age                        ");
+		age=sc.nextInt();
+		
+		System.out.print("Gender                     ");
+		gender=sc.next();
+		
+	    System.out.print("ID Number                  ");
+		ID_num=sc.next();
+		
+		System.out.print("Address                    ");
+		address=sc.next();
+		
+		System.out.print("Travel Season              ");
+		travel_season=sc.next();
+		
+		System.out.print("Travel Package             ");
+		travel_package=sc.next();
+		
+		if(age<15) {
+			System.out.println("Category                   Child ");
+			
+		}
+		
+		else if((age>14)&&(age<25)){
+			System.out.println("Category                   Teenagers");
+		}
+		
+		else if((age>24)&&(age<65)){
+			System.out.println("Category                   Adults");
+		}
+		
+		else {
+			System.out.println("Category                   Seniors");
+		}
+		
+		System.out.print("Travel Insurance Option    RM ");
+		travel_ins=sc.nextDouble();
+		
+		System.out.print("Travel Rate                RM ");
+		travel_rate=sc.nextDouble();
+		
+		total=travel_ins+travel_rate;
+		System.out.printf("Travel Rate                RM %.2f" , total);
+		
+		
+
+	}
+
+}
